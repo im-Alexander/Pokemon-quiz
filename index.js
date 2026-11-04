@@ -25,7 +25,7 @@ $(".submitButton").click(function () {
 
         var score = calculateScore();
 
-        var playerBonus = $(".bonusAnswer").val();
+        playerBonus = $(".bonusAnswer").val();
         bonusAnswer = calculateBonus(playerBonus);
         $(".questionNumber").html("You got " + score + "/20 correct!<br />You were " + bonusAnswer + " away from the correct number!");
     }
@@ -86,10 +86,11 @@ function calculateBonus(userInput) {
     var finalString = "";
 
     // for loop to add commas to the returning string
-    for (i = 0; i < stringLength; i++) {
-        if ((i - stringLength) % 3 === 0) {
+    for (i = 0; i < scoreString.length; i++) {
+        if (stringLength % 3 === 0 && i != 0) {
             finalString = finalString + ",";
         }
+        stringLength--;
         finalString = finalString + scoreString[i];
     }
 

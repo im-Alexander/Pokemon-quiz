@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
     <h1 class="title">Pokémon Quiz</h1>
 
     <h2 class="questionNumber">Question #1</h2>
-    <label>A</label>
-    <input type="radio" name="answer" value="A" id="a">
-    <label>B</label>
-    <input type="radio" name="answer" value="B" id="b">
-    <label>C</label>
-    <input type="radio" name="answer" value="C" id="c">
-    <label>D</label>
-    <input type="radio" name="answer" value="D" id="d">
+    <div class="radioField">
+        <label>A</label>
+        <input type="radio" name="answer" value="A" id="a">
+        <label>B</label>
+        <input type="radio" name="answer" value="B" id="b">
+        <label>C</label>
+        <input type="radio" name="answer" value="C" id="c">
+        <label>D</label>
+        <input type="radio" name="answer" value="D" id="d">
+    </div>
 
-    <input type="number" name="bonusAnswer" class="invisible">
+    <!-- Bonus question box starts invisible-->
+    <input type="number" name="bonusAnswer" class="bonusAnswer invisible" value="0">
+
+    <!-- Bonus question box starts invisible-->
+    <input type="text" name="password" class="password invisible">
 
     <br>
     <input type="submit" value="Next Question" class="submitButton">

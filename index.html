@@ -6,31 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Quiz</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/pokeball_PNG22-3138372768.png">
+
+    <!-- Imported Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="title">Pokémon Quiz</h1>
+    <div class="container">
+        <h1 class="title">Pokémon Quiz</h1>
 
-    <h2 class="questionNumber">Question #1</h2>
-    <div class="radioField">
-        <label>A</label>
-        <input type="radio" name="answer" value="A" id="a">
-        <label>B</label>
-        <input type="radio" name="answer" value="B" id="b">
-        <label>C</label>
-        <input type="radio" name="answer" value="C" id="c">
-        <label>D</label>
-        <input type="radio" name="answer" value="D" id="d">
+        <h2 class="questionNumber">Question #1</h2>
+        <div class="radioField">
+            <div class="optionRow">
+                <div class="option">
+                    <label for="A">A</label>
+                    <input type="radio" name="answer" value="A" id="a">
+                </div>
+
+                <div class="option">
+                    <label for="B">B</label>
+                    <input type="radio" name="answer" value="B" id="b">
+                </div>
+            </div>
+
+            <div class="optionRow">
+                <div class="option">
+                    <label for="C">C</label>
+                    <input type="radio" name="answer" value="C" id="c">
+                </div>
+
+                <div class="option">
+                    <label for="D">D</label>
+                    <input type="radio" name="answer" value="D" id="d">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bonus question box starts invisible-->
+        <input type="number" name="bonusAnswer" class="bonusAnswer invisible" value="0">
+
+        <!-- Bonus question box starts invisible-->
+        <input type="text" name="password" class="password invisible">
+
+        <br>
+        <input type="submit" value="Next Question" class="submitButton">
     </div>
 
-    <!-- Bonus question box starts invisible-->
-    <input type="number" name="bonusAnswer" class="bonusAnswer invisible" value="0">
-
-    <!-- Bonus question box starts invisible-->
-    <input type="text" name="password" class="password invisible">
-
-    <br>
-    <input type="submit" value="Next Question" class="submitButton">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./index.js"></script>

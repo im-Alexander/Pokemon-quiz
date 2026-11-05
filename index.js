@@ -27,7 +27,7 @@ $(".submitButton").click(function () {
 
         playerBonus = $(".bonusAnswer").val();
         bonusAnswer = calculateBonus(playerBonus);
-        $(".questionNumber").html("You got " + score + "/20 correct!<br />You were " + bonusAnswer + " away from the correct number!");
+        $(".questionNumber").html("You got " + score + "/20 correct!<br /><br />You were " + bonusAnswer + " away from the correct number!");
     }
 
     // if an option is selected

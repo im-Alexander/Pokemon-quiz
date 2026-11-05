@@ -1,3 +1,49 @@
-.invisible{
-    display:none;
+body {
+    background-color: beige;
+
+    /* Imported google font*/
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.radioField {
+    display: flex;
+    flex-direction: column;
+}
+
+.optionRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    margin: 5px;
+    border: rgb(202, 100, 100) 2px solid;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+.questionNumber {
+    text-align: center;
+}
+
+/* Used to make elements invisible*/
+.invisible {
+    display: none;
 }

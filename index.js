@@ -50,6 +50,12 @@ $(".submitButton").click(function () {
 
         // unselect the radio button
         $('input[name="answer"]').prop('checked', false);
+
+        $("body").addClass("flash");
+        setTimeout(() => {
+            $("body").removeClass("flash");
+        }, 150);
+
     }
 });
 

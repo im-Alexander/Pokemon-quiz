@@ -10,6 +10,10 @@ body {
         "GRAD" 0;
 }
 
+.flash {
+    background-color: chartreuse;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -32,11 +36,31 @@ body {
 .option {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 40px;
     width: 80px;
-    margin: 5px;
-    border: rgb(202, 100, 100) 2px solid;
+    margin: 1rem 2rem;
     padding: 2px;
+    border: black 2px solid;
     border-radius: 7px;
+    background-color: rgb(211, 142, 142);
+    box-shadow: 10px 10px rgb(0 0 0 / .5);
+    font-size: 2rem;
+}
+
+.option input {
+    height: 1rem;
+    width: 1rem;
+}
+
+.submitButton {
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(80, 45, 255);
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(84, 185, 253, 0.5);
 }
 
 .questionNumber {

@@ -17,6 +17,14 @@
 </head>
 
 <body>
+    <!-- Check if user tries to leave the page-->
+    <script language="JavaScript">
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+            return "WARNING: You are attempting to leave this page! If you do your progress will be lost!";
+        }
+    </script>
+
     <div class="container">
         <h1 class="title">Pokémon Quiz</h1>
 

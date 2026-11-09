@@ -5,20 +5,30 @@ var bonusAnswer = 4294967296;
 // Players Answers
 var playerAnswers = [];
 var playerBonus = 0;
-var questionNumber = 1;
+var questionNumber = 0;
 
 // When the submit button is clicked
 $(".submitButton").click(function () {
     // gets user answer
     var userAnswer = $('input[name="answer"]:checked').val();
 
+    // when the start quiz button is pressed
+    if (questionNumber === 0){
+        questionNumber++;
+        $(".radioField").removeClass("invisible");
+        $(".questionNumber").html("Question #" + questionNumber);
+        $(".submitButton").val("Next Question");
+    } // end if
+
+    // when we are on the "Check Password" screen
     if (questionNumber === correctAnswers.length + 1) {
         $(".password").removeClass("invisible");
         $(".bonusAnswer").addClass("invisible");
         $(".questionNumber").html("Enter the password to see your score!");
         $(".submitButton").val("Check Password!");
-    }
+    } // end if
 
+    // when the correct password is entered
     if ($(".password").val().toLowerCase() === "i love 3kg") {
         $(".submitButton").addClass("invisible");
         $(".password").addClass("invisible");
@@ -28,7 +38,7 @@ $(".submitButton").click(function () {
         playerBonus = $(".bonusAnswer").val();
         bonusAnswer = calculateBonus(playerBonus);
         $(".questionNumber").html("You got " + score + "/20 correct!<br /><br />You were " + bonusAnswer + " away from the correct number!");
-    }
+    } // end if
 
     // if an option is selected
     if (userAnswer != undefined) {
@@ -56,8 +66,8 @@ $(".submitButton").click(function () {
             $("body").removeClass("flash");
         }, 150);
 
-    }
-});
+    } // end if
+}); // end .submitButton is clicked
 
 // calculates the players final score
 // @returns the players score
